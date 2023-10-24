@@ -88,6 +88,5 @@ def test_gauss(mu=0., sigma=1., support=10., num_points=500):
 
 if __name__ == '__main__':
     test_triangular()
-    
     plt.show()
-	
+    #added this line just to verify that continuous ntegration work
