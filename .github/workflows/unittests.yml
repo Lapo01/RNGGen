@@ -29,6 +29,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install pytest
         pip install -e .
+        source env.sh
     - name: Test with pytest
       run: |
         pytestpython
