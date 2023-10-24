@@ -25,8 +25,8 @@ class ProbDensityF(InterpolatedUnivariateSpline):
         self.ppf = InterpolatedUnivariateSpline(xppf, yppf)
     
     def prob(self, x1, x2):
-        """
-	    """
+        """Calculates probability to find a number between x1 and x2, input are floats.
+	"""
         return self.cdf(x2) - self.cdf(x1)
 
     def rnd(self, size = 1000):
@@ -34,7 +34,11 @@ class ProbDensityF(InterpolatedUnivariateSpline):
             function
         """
         return self.ppf(np.random.uniform(size = size))
-	
+
+    def meanvalue(x,y):
+    	"""Returns meanvalue between 0 and 1
+    	"""
+    	return InterpolatedUnivariateSpline(x,y*x).integral(0,1)
 	
 	
 	
