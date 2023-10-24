@@ -35,4 +35,4 @@ jobs:
         source env.sh
     - name: Test with pytest
       run: |
-        pytestpython
+        pytest tests/tests.py
