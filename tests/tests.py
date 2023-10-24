@@ -4,7 +4,7 @@ from scipy.optimize import curve_fit
 from matplotlib import pyplot as plt
 
 
-from RNGGen.RNGGen import ProbDensityF
+from RNGGen.Code import ProbDensityF
 
 
 
