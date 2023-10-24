@@ -64,7 +64,7 @@ authors = [
 # maintains the project, and a valid email address corresponding to the name
 # listed.
 maintainers = [
-  {name = "Lapo", email =  "lapodispoto@gmail.com"}
+  {name = "Lapo", email = "lapodispoto@gmail.com"}
 ]
 
 # Classifiers help users find your project by categorizing it.
@@ -103,10 +103,9 @@ classifiers = [
 # For an analysis of this field vs pip's requirements files see:
 # https://packaging.python.org/discussions/install-requires-vs-requirements/
 dependencies = [
-  "numpy"
-  "matplotlib"
+  "numpy",
+  "matplotlib",
   "scipy"
-  
 ]
 
 # List additional groups of dependencies here (e.g. development
