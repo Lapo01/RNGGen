@@ -29,6 +29,9 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install pytest
         pip install -e .
+        pip install numpy
+        pip install matplotlib
+        pip install scipy
         source env.sh
     - name: Test with pytest
       run: |
