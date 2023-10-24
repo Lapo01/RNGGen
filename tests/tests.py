@@ -36,7 +36,8 @@ def test_triangular():
     plt.figure('Sampling')
     rnd = pdf.rnd(1000000)
     plt.hist(rnd, bins=200)
-
+    print(ProbDensityF.meanvalue(x,y))
+    
 
 def test_gauss(mu=0., sigma=1., support=10., num_points=500):
     """Unit test with a gaussian distribution.
@@ -87,5 +88,6 @@ def test_gauss(mu=0., sigma=1., support=10., num_points=500):
 
 if __name__ == '__main__':
     test_triangular()
+    
     plt.show()
 	
