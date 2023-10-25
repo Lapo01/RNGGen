@@ -1,3 +1,8 @@
+
+
+"""General utilities.
+"""
+
 import time
 import numpy as np
 from matplotlib import pyplot as plt
@@ -9,11 +14,14 @@ from scipy.optimize import curve_fit
 
 
 
-#Ok, let's first define a pdf class: a pdf is characterized by its ppf, cf
-
 
 
 class ProbDensityF(InterpolatedUnivariateSpline):
+    """This class defines a probability density function, it is characterized by a cumulative density function cdf, and a ppf.
+    It has the prob methods which returns the probability to find a number between x1 and x2.
+    Rnd method generate a variable size ndarray of RNG numbers.
+    meanvalue method return the mean value betwen 0 and 1. 
+    """
     def __init__(self,x,y):
         InterpolatedUnivariateSpline.__init__(self,x,y) 
         """the pdf class is inheriting from the scipy class InterpolatedUnivariateSpline

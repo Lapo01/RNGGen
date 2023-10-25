@@ -5,4 +5,7 @@ API
 Module documentation
 --------------------
 
-.. automodule:: RNGGen.RNGGen
+.. automodule:: RNGGen.Code
+.. autoclass :: ProbDensityF
+   :members:
+	

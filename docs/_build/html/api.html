@@ -16,6 +16,7 @@
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Installation instructions" href="install.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -34,8 +35,37 @@
             
   <section id="api">
 <h1>API<a class="headerlink" href="#api" title="Permalink to this heading">¶</a></h1>
-<section id="module-RNGGen.RNGGen">
-<span id="module-documentation"></span><h2>Module documentation<a class="headerlink" href="#module-RNGGen.RNGGen" title="Permalink to this heading">¶</a></h2>
+<section id="module-RNGGen.Code">
+<span id="module-documentation"></span><h2>Module documentation<a class="headerlink" href="#module-RNGGen.Code" title="Permalink to this heading">¶</a></h2>
+<p>General utilities.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="RNGGen.Code.ProbDensityF">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">RNGGen.Code.</span></span><span class="sig-name descname"><span class="pre">ProbDensityF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RNGGen.Code.ProbDensityF" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class defines a probability density function, it is characterized by a cumulative density function cdf, and a ppf.
+It has the prob methods which returns the probability to find a number between x1 and x2.
+Rnd method generate a variable size ndarray of RNG numbers.
+meanvalue method return the mean value betwen 0 and 1.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="RNGGen.Code.ProbDensityF.meanvalue">
+<span class="sig-name descname"><span class="pre">meanvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RNGGen.Code.ProbDensityF.meanvalue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns meanvalue between 0 and 1</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RNGGen.Code.ProbDensityF.prob">
+<span class="sig-name descname"><span class="pre">prob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RNGGen.Code.ProbDensityF.prob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates probability to find a number between x1 and x2, input are floats.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RNGGen.Code.ProbDensityF.rnd">
+<span class="sig-name descname"><span class="pre">rnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RNGGen.Code.ProbDensityF.rnd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a ndarray of size 1000 of random number distributed according to the pdf
+function</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 </section>
 
@@ -56,11 +86,20 @@
 
 
 <h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation instructions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-RNGGen.Code">Module documentation</a></li>
+</ul>
+</li>
+</ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="install.html" title="previous chapter">Installation instructions</a></li>
   </ul></li>
 </ul>
 </div>
