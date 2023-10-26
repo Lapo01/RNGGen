@@ -37,6 +37,8 @@ def test_triangular():
     rnd = pdf.rnd(1000000)
     plt.hist(rnd, bins=200)
     print(ProbDensityF.meanvalue(x,y))
+    array = np.linspace(0, 1, 10)
+    print(pdf.value(array) - 2.*array)
     
 
 def test_gauss(mu=0., sigma=1., support=10., num_points=500):
