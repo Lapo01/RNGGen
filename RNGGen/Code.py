@@ -46,7 +46,7 @@ class ProbDensityF(InterpolatedUnivariateSpline):
     def meanvalue(x,y):
     	"""Returns meanvalue between 0 and 1
     	"""
-    	return InterpolatedUnivariateSpline(x,y*x).integral(0,1)
+        return InterpolatedUnivariateSpline(x,y*x).integral(0,1)
     def value(self, x):
         """ Returns value of pdf calculated on a generic ndarray, it is based on inheritance from the scipy InterpolatedUnivariateSpline class
         """
@@ -55,7 +55,7 @@ class ProbDensityF(InterpolatedUnivariateSpline):
     def error(self,x,y):
         """Returns the numerical error being made by using spline approximation
         """
-    	return np.mean(y - self.__call__(x))
+        return np.mean(y - self.__call__(x))
 	
 	
 
