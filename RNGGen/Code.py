@@ -52,7 +52,10 @@ class ProbDensityF(InterpolatedUnivariateSpline):
         """
         return self.__call__(x)
 	
-	
+    def error(self,x,y):
+        """Returns the numerical error being made by using spline approximation
+        """
+    	return np.mean(y - self.__call__(x))
 	
 	
 

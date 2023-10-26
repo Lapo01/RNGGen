@@ -39,7 +39,7 @@ def test_triangular():
     print(ProbDensityF.meanvalue(x,y))
     array = np.linspace(0, 1, 10)
     print(pdf.value(array) - 2.*array)
-    
+    print(pdf.error(x,y))
 
 def test_gauss(mu=0., sigma=1., support=10., num_points=500):
     """Unit test with a gaussian distribution.
@@ -85,10 +85,12 @@ def test_gauss(mu=0., sigma=1., support=10., num_points=500):
     nu = mask.sum() - 3
     sigma = np.sqrt(2 * nu)
     print(chi2, nu, sigma)
-    
+    array = np.linspace(0, 1, 10)
+    print(pdf.value(array) - 2.*array)
+    print(pdf.error(x,y))
 
 
 if __name__ == '__main__':
-    test_triangular()
+    test_gauss()
     plt.show()
     #added this line just to verify that continuous ntegration work
